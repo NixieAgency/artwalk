@@ -99,10 +99,9 @@ background-color:#363B48;
 }
 .navbar-default .navbar-brand,.navbar-inverse .navbar-brand{
 color:#FFF;
-text-transform:uppercase;
-letter-spacing:8px;
+letter-spacing:1.5px;
 font-weight:800;
-font-size:18px;
+font-size:20px;
 }
 #page{
 position:relative;
