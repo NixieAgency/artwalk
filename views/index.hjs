@@ -106,17 +106,22 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-md-8 col-md-offset-2 text-center">
-                            <h4 class="small-title">
-                                With a new theme each round
-                            </h4>
                             <h2 class="big-title">
-                                the Napa ARTwalk
+                                The Napa ARTwalk
                             </h2>
                             <p>
                                 supports the creation of original, high-quality and collaborative sculpture from regional artists. Fifteen sculptures are currently exhibiting in Downtown Napa, all relating to the theme of Metamorphosis. The current tour will be on view June 2013 - May 2015.
                             </p> 
                             <hr>
-                            <p><em>Pick up a tour brochure at the Napa Valley Welcome Center at 600 Main St. Napa</em><br>OR<br><a href="pdf/ARTwalk1315_Brochure.pdf">download one now</a>.
+                            <i class="fa fa-instagram fa-5x"></i>
+                            <br>
+                            <strong class="little-title">#NapaArtWalk</strong>
+                            <hr>
+                            <p>Pick up a tour brochure at the Napa Valley Welcome Center at 600 Main St. Napa
+                            <br>
+                            OR
+                            <br>
+                            <a href="pdf/ARTwalk1315_Brochure.pdf">download one now</a>.
                             </p>
                         </div>
                     </div>
