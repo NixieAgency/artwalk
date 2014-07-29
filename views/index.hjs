@@ -110,12 +110,23 @@
                                 The Napa ARTwalk
                             </h2>
                             <p>
-                                supports the creation of original, high-quality and collaborative sculpture from regional artists. Fifteen sculptures are currently exhibiting in Downtown Napa, all relating to the theme of Metamorphosis. The current tour will be on view June 2013 - May 2015.
+                                supports the creation of original, high-quality and collaborative sculpture from regional artists. Fifteen sculptures are currently exhibiting in downtown Napa, all relating to the theme of Metamorphosis. The current tour will be on view till May 2015. Be sure to vote for your favorite artist and hash tag your pictures!
                             </p> 
                             <hr>
-                            <i class="fa fa-instagram fa-5x"></i>
-                            <br>
-                            <strong class="little-title">#NapaArtWalk</strong>
+                        </div>
+						<div class="col-md-2 col-md-offset-4 text-center">
+							<a href="https://www.surveymonkey.com/s/napaartwalk">
+	                            <i class="fa fa-thumbs-o-up fa-5x"></i><br>
+	                            <strong class="little-title">Vote Online</strong>
+                            </a>
+	                    </div>
+						<div class="col-md-2 text-center">
+							<a href="http://searchinstagram.com/NapaArtWalk">
+			                    <i class="fa fa-instagram fa-5x"></i><br>
+					            <strong class="little-title">#NapaArtWalk</strong>
+				            </a>
+						</div>
+	                    <div class="col-md-8 col-md-offset-2 text-center">
                             <hr>
                             <p>Pick up a tour brochure at the Napa Valley Welcome Center at 600 Main St. Napa
                             <br>
