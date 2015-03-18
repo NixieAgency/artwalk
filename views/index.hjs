@@ -102,25 +102,6 @@
                 </ul>
             </div>
             <!-- end:Slider -->
-            <section class="space" id="pre-footer">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-8 col-md-offset-2 text-center">
-                            <h2 class="big-title">
-                              Call for Entries - Napa ARTwalk 2015-2017
-                            </h2>
-                            <hr style="width:18%;"/>
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col-md-8 col-md-offset-2">
-                          <p>The City of Napa is seeking up to fifteen artists to participate in the next downtown Napa ARTwalk. Artists over 18 years old from seven Western states (AZ, CA, CO, NV, NM & WA) are eligible to submit completed works for this two-year, outdoor sculpture exhibit.</p> 
-                          <p>In this fourth iteration of the program, there will be no theme requirement and each selected artist will receive a $1,500 honorarium. Applications are due by January 31, 2015 at midnight (CST) and must be submitted through <a href="https://www.callforentry.org/festivals_unique_info.php?ID=2279&sortby=fair_name&apply=yes">callforentries.org.</a></p>
-                        </div>
-                    </div>
-                </div>
-            </section>
             <section class="space" id="about">
                 <div class="container">
                     <div class="row">
@@ -139,7 +120,7 @@
                             </a>
 	                    </div>
 						<div class="col-md-2 text-center">
-							<a href="http://searchinstagram.com/NapaArtWalk">
+							<a href="https://tagboard.com/NapaArtWalk/search">
 			                    <i class="fa fa-instagram fa-5x"></i><br>
 					            <strong class="little-title">#NapaArtWalk</strong>
 				            </a>
