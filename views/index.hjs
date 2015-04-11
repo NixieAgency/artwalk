@@ -39,24 +39,39 @@
             <div class="menu-wrapper">
                 <ul>
                     <li class="active">
-                        <a href="#slides">
-                            Home 
-                        </a>
+                      <a href="#slides">
+                        News
+                      </a>
                     </li>
                     <li>
-                        <a href="#about">
-                            About 
-                        </a>
+                      <a href="/about">
+                        About
+                      </a>
                     </li>
                     <li>
-                        <a href="#artists">
-                            Artists
-                        </a>
+                      <a href="#artists">
+                        Artists
+                      </a>
                     </li>
                     <li>
-                        <a href="#sponsors">
-                            Sponsors
-                        </a>
+                      <a href="/archive">
+                        Archive
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/gallery">
+                        Gallery
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/about#media">
+                        Media
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/about#sponsors">
+                        Sponsors
+                      </a>
                     </li>
                 </ul>
             </div>
