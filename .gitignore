@@ -1,0 +1,13 @@
+logs/*
+npm-debug.log
+node_modules/
+sketches/
+tmp/
+bower_components/
+.bower-cache/
+.bower-registry/
+tmp
+.DS_Store
+.idea
+*.swp
+*.swo
