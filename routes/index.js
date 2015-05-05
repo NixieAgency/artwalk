@@ -3,8 +3,7 @@ var router = express.Router();
 
 /* GET landing page. */
 router.get('/', function(req, res) {
-  //res.render('index', { title: 'Express' });
-  res.render('landing', { title: 'Napa Art Walk' });
+  res.render('index', { title: 'Napa Art Walk' });
 });
 
 /* GET about page. */
