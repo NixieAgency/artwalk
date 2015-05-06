@@ -8,7 +8,8 @@ angular.module('myApp', [
   'myApp.landing',
   'myApp.about',
   'myApp.archive',
-  'myApp.gallery'
+  'myApp.gallery',
+  'myApp.artist'
 ]).
 config(['$routeProvider', function($routeProvider) {
   $routeProvider.otherwise({redirectTo: '/'});
