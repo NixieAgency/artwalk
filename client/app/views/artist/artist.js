@@ -24,6 +24,10 @@ angular.module('myApp.artist', ['ngRoute'])
             art[feild] = item['gsx$' + feild]['$t'];
           });
           return art;
+        }).map(function(item){
+          var slug = item.title + ' by ' + item.artist;
+          item.slug = slug.replace(/[^\w\s-]/g, "").trim().toLowerCase().replace(/[-\s]+/g, "-");
+          return item;
         }));
       });
   };
