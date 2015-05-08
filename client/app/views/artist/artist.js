@@ -15,14 +15,15 @@ angular.module('myApp.artist', ['ngRoute'])
 
 .service('Artist', ['$http', function($http){
   this.query = function(cb){
+    var fields = ['platformnumber', 'title', 'nerrative', 'make', 'artist', 'hometown', 'email', 'website', 'image', 'audiolink', 'latitude', 'longitude'];
     $http.get("https://spreadsheets.google.com/feeds/list/" + "1fPfTlzipfy-dlZGOUFDW7n3T-ow8_TVUrrMDYyM2vTQ" + "/od6/public/values?alt=json")
       .success(function(data){
         cb(data.feed.entry.map(function(item){
-          console.log(item);
-          return {
-            title: item.gsx$title.$t,
-            artist: item.gsx$artist.$t
-          };
+          var art = {};
+          fields.forEach(function(feild){
+            art[feild] = item['gsx$' + feild]['$t'];
+          });
+          return art;
         }));
       });
   };
@@ -31,6 +32,10 @@ angular.module('myApp.artist', ['ngRoute'])
 .controller('artistListCtrl', ['$scope', '$http', function($scope, $http) {
   $http.get('http://hipsterjesus.com/api/').success(function(data){
     $scope.ipsum = data.text;
+  });
+
+  Artist.query(function(artists){
+    $scope.aritsts = artists;
   });
 
   console.log("hello from artist list");
