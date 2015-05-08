@@ -62,11 +62,15 @@
 
   <section class="space-no-top" id="pre-footer">
     <div class="row">
+      <div ng-repeat="artist in artists">
         <div class="col-lg-4 col-sm-6 col-xs-12">
-            <a href="#">
-                 <img src="http://420placehold.it/zooportraits/300-200" class="thumbnail img-responsive">
-            </a>
+          <a href="#/artist/{{artist.slug}}">
+             <img src="http://420placehold.it/zooportraits/300-200" class="thumbnail img-responsive">
+             <h2>{{artist.title}}</h2>
+             <p>{{artist.artist}} | {{artist.hometown}}</p>
+          </a>
         </div>
+      </div>
       </div>
   </section>
 </div>
