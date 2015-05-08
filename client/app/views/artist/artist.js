@@ -13,22 +13,15 @@ angular.module('myApp.artist', ['ngRoute'])
   });
 }])
 
-.service('Artist', ['$http', function($http){
+.service('Artist', ['$http', 'googleSheetsHelper', function($http, googleSheetsHelper){
+  var artist_fields = ['platformnumber', 'title', 'nerrative', 'make', 'artist', 'hometown', 'email', 'website', 'image', 'audiolink', 'latitude', 'longitude'];
+
   this.query = function(cb){
-    var fields = ['platformnumber', 'title', 'nerrative', 'make', 'artist', 'hometown', 'email', 'website', 'image', 'audiolink', 'latitude', 'longitude'];
-    $http.get("https://spreadsheets.google.com/feeds/list/" + "1fPfTlzipfy-dlZGOUFDW7n3T-ow8_TVUrrMDYyM2vTQ" + "/od6/public/values?alt=json")
+    //var url = "https://spreadsheets.google.com/feeds/list/1fPfTlzipfy-dlZGOUFDW7n3T-ow8_TVUrrMDYyM2vTQ/od6/public/values?alt=json";
+    var url = "/client/components/artwalk.json";
+    $http.get(url)
       .success(function(data){
-        cb(data.feed.entry.map(function(item){
-          var art = {};
-          fields.forEach(function(feild){
-            art[feild] = item['gsx$' + feild]['$t'];
-          });
-          return art;
-        }).map(function(item){
-          var slug = item.title + ' by ' + item.artist;
-          item.slug = slug.replace(/[^\w\s-]/g, "").trim().toLowerCase().replace(/[-\s]+/g, "-");
-          return item;
-        }));
+        cb(googleSheetsHelper.parse(artist_fields, ['title', 'artist'], data));
       });
   };
 }])

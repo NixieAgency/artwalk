@@ -5,6 +5,7 @@ angular.module('myApp', [
   'ngRoute',
   'ngSanitize',
   'mgcrea.ngStrap',
+  'myApp.googleSheetsHelper',
   'myApp.landing',
   'myApp.about',
   'myApp.archive',
