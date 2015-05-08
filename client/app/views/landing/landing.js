@@ -16,7 +16,6 @@ angular.module('myApp.landing', ['ngRoute'])
 
 .controller('landingCtrl', ['$scope', '$http', 'Lorem', function($scope, $http, Lorem) {
 
-  $scope.ipsum = Lorem.blurb;
   $scope.ipsumtheme = Lorem.article;
 
   console.log(Lorem.blurb);
