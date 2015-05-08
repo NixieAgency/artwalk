@@ -29,26 +29,15 @@ angular.module('myApp.artist', ['ngRoute'])
   };
 }])
 
-.controller('artistListCtrl', ['$scope', '$http', function($scope, $http) {
-  $http.get('http://hipsterjesus.com/api/').success(function(data){
-    $scope.ipsum = data.text;
-  });
+.controller('artistListCtrl', ['$scope', '$http', 'Artist', function($scope, $http, Artist) {
 
   Artist.query(function(artists){
     $scope.aritsts = artists;
   });
 
-  console.log("hello from artist list");
 }])
 .controller('artistShowCtrl', ['$scope', '$http', '$routeParams', 'Artist', function($scope, $http, $routeParams, Artist) {
 
-  Artist.query(function(artists){
-    console.log(artists);
-  });
-
   console.log($routeParams.artistSlug);
 
-  $http.get('http://hipsterjesus.com/api/').success(function(data){
-    $scope.ipsum = data.text;
-  });
 }]);

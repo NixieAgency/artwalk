@@ -9,8 +9,8 @@ angular.module('myApp.about', ['ngRoute'])
   });
 }])
 
-.controller('aboutCtrl', ['$scope', '$http', function($scope, $http) {
-  $http.get('http://hipsterjesus.com/api/').success(function(data){
-    $scope.ipsum = data.text;
-  });
+.controller('aboutCtrl', ['$scope', '$http', 'Lorem', function($scope, $http, Lorem) {
+
+  $scope.ipsum = Lorem.blurb;
+
 }]);
