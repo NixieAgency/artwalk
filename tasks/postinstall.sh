@@ -15,9 +15,8 @@ rm client/app/bundle*.min.css
 #pending: compressed css was breaking footer styling
 (cd client/app;
 cat \
-app.css \
 css/bootstrap.css \
-css/style.css \
+app.css \
 | cleancss -o $cssbundle )
 
 #build js
@@ -25,10 +24,12 @@ rm client/app/bundle*min.js
 (cd client/app;
 uglifyjs \
 app.js \
+components/googleSheetsHelper/googleSheetsHelper.js \
 views/landing/landing.js \
 views/about/about.js \
 views/archive/archive.js \
 views/gallery/gallery.js \
+views/artist/artist.js \
 -o $jsbundle -mc )
 
 echo { \"css\": \"$cssbundle\", \"js\": \"$jsbundle\"  } > config/assetbuilds.json

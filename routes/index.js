@@ -1,24 +1,32 @@
 var express = require('express');
 var router = express.Router();
+var builds = require('../config/assetbuilds.json');
 
 /* GET landing page. */
 router.get('/', function(req, res) {
-  res.render('index', { title: 'Napa Art Walk' });
-});
+  var prod_js = [{ path: '/client/' + builds.js }];
+  var dev_js = [
+    { path: '/client/app.js' },
+    { path: '/client/components/googleSheetsHelper/googleSheetsHelper.js' },
+    { path: '/client/views/landing/landing.js' },
+    { path: '/client/views/about/about.js' },
+    { path: '/client/views/archive/archive.js' },
+    { path: '/client/views/gallery/gallery.js' },
+    { path: '/client/views/artist/artist.js' }
+  ];
+  var prod_css = [{ path: '/client/' + builds.css }];
+  var dev_css = [
+    { path: '/client/css/bootstrap.css' },
+    { path: '/client/app.css' }
+  ];
 
-/* GET about page. */
-router.get('/about', function(req, res) {
-  res.render('about', { title: 'Napa Art Walk | About' });
-});
-
-/* GET archive page. */
-router.get('/archive', function(req, res) {
-  res.render('archive', { title: 'Napa Art Walk | Archive' });
-});
-
-/* GET gallery page. */
-router.get('/gallery', function(req, res) {
-  res.render('gallery', { title: 'Napa Art Walk | Gallery' });
+  res.render('index', {
+    title: 'Napa Art Walk',
+    assets: {
+      js: process.env.NODE_ENV == 'development' ? dev_js : prod_js,
+      css: process.env.NODE_ENV == 'development' ? dev_css : prod_css
+    }
+  });
 });
 
 module.exports = router;

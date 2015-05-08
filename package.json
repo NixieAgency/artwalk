@@ -6,7 +6,7 @@
     "postinstall": "./tasks/postinstall.sh",
     "prestart": "npm install",
     "start": "node ./bin/www",
-    "devserver": "nodemon ./bin/www"
+    "devserver": "./tasks/devserver.sh"
   },
   "dependencies": {
     "body-parser": "~1.0.0",
