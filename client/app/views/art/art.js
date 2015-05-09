@@ -15,6 +15,7 @@ angular.module('myApp.art', ['ngRoute'])
 
 .service('Art', ['$http', '$q', 'googleSheetsHelper', function($http, $q, googleSheetsHelper){
   var art_fields = ['platformnumber', 'title', 'nerrative', 'make', 'artist', 'hometown', 'email', 'website', 'image', 'audiolink', 'latitude', 'longitude'];
+
   var url = "https://spreadsheets.google.com/feeds/list/1fPfTlzipfy-dlZGOUFDW7n3T-ow8_TVUrrMDYyM2vTQ/od6/public/values?alt=json";
   //var url = "/client/components/artwalk.json";
 
@@ -34,7 +35,6 @@ angular.module('myApp.art', ['ngRoute'])
       });
   };
 }])
-//defer.resolve(googleSheetsHelper.parse(art_fields, ['title', 'artist'], data));
 
 .controller('artListCtrl', ['$scope', '$http', 'Art', function($scope, $http, Art) {
 
