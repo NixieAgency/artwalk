@@ -18,7 +18,7 @@ angular.module('myApp.landing', ['ngRoute'])
 
   $scope.ipsumtheme = Lorem.article;
 
-  Art.query(function(arts){
+  Art.list().then(function(arts){
     $scope.arts = arts;
   });
 
