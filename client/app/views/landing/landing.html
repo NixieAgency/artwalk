@@ -62,12 +62,12 @@
 
   <section class="space-no-top" id="pre-footer">
     <div class="row">
-      <div ng-repeat="artist in artists">
+      <div ng-repeat="art in arts">
         <div class="col-lg-4 col-sm-6 col-xs-12">
           <a ng-href="#/artist/{{artist.slug}}">
              <img src="http://placehold.it/300x200" class="thumbnail img-responsive">
-             <h2>{{artist.title}}</h2>
-             <p>{{artist.artist}} | {{artist.hometown}}</p>
+             <h2>{{art.title}}</h2>
+             <p>{{art.artist}} | {{art.hometown}}</p>
           </a>
         </div>
       </div>
