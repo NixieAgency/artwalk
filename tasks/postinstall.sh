@@ -29,7 +29,7 @@ views/landing/landing.js \
 views/about/about.js \
 views/archive/archive.js \
 views/gallery/gallery.js \
-views/artist/artist.js \
+views/art/art.js \
 -o $jsbundle -mc )
 
 echo { \"css\": \"$cssbundle\", \"js\": \"$jsbundle\"  } > config/assetbuilds.json
