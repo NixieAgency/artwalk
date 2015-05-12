@@ -9,6 +9,9 @@ angular.module('myApp.archive', ['ngRoute'])
   });
 }])
 
-.controller('archiveCtrl', [function() {
+.controller('archiveCtrl', ['$scope', 'Lorem', function($scope, Lorem) {
+
+  $scope.ipsum = Lorem.blurb;
+  $scope.short = Lorem.short;
 
 }]);
