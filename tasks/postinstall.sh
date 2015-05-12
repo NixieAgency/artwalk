@@ -15,7 +15,7 @@ rm client/app/bundle*.min.css
 #pending: compressed css was breaking footer styling
 (cd client/app;
 cat \
-css/bootstrap.css \
+bootstrap-3.3.4-dist/css/bootstrap.css \
 app.css \
 | cleancss -o $cssbundle )
 

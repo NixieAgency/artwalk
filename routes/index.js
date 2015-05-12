@@ -16,9 +16,10 @@ router.get('/', function(req, res) {
   ];
   var prod_css = [{ path: '/client/' + builds.css }];
   var dev_css = [
-    { path: '/client/css/bootstrap.css' },
+    { path: '/client/bootstrap-3.3.4-dist/css/bootstrap.css' },
     { path: '/client/app.css' }
   ];
+
 
   res.render('index', {
     title: 'Napa Art Walk',
