@@ -12,5 +12,6 @@ angular.module('myApp.about', ['ngRoute'])
 .controller('aboutCtrl', ['$scope', '$http', 'Lorem', function($scope, $http, Lorem) {
 
   $scope.ipsum = Lorem.blurb;
+  $scope.short = Lorem.short;
 
 }]);
