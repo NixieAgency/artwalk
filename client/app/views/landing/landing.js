@@ -25,9 +25,9 @@ angular.module('myApp.landing', ['ngRoute'])
 
   function draw(){
     var locations = [
-      ['Oxbow Market', 38.301347, -122.281463],
-      ['Vals', 38.295393, -122.288913],
-      ['Contruction', 38.297848, -122.288076]
+      ['<h1>Platoform 1</h1><img src="http://lorempixel.com/300/200/abstract"></img>', 38.301347, -122.281463],
+      ['<h1>Platoform 2</h1><img src="http://lorempixel.com/300/200/fashion"></img>', 38.295393, -122.288913],
+      ['<h1>Platoform 3</h1><img src="http://lorempixel.com/300/200/food"></img>', 38.297848, -122.288076]
     ];
 
     var map = new google.maps.Map(document.getElementById('map'), {
