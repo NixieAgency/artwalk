@@ -23,4 +23,38 @@ angular.module('myApp.landing', ['ngRoute'])
     $scope.arts = arts;
   });
 
+  function draw(){
+    var locations = [
+      ['Oxbow Market', 38.301347, -122.281463],
+      ['Vals', 38.295393, -122.288913],
+      ['Contruction', 38.297848, -122.288076]
+    ];
+
+    var map = new google.maps.Map(document.getElementById('map'), {
+      zoom: 15,
+      center: new google.maps.LatLng(38.299650, -122.284171),
+      mapTypeId: google.maps.MapTypeId.ROADMAP
+    });
+
+    var infowindow = new google.maps.InfoWindow();
+
+    var marker, i;
+
+    for (i = 0; i < locations.length; i++) {  
+      marker = new google.maps.Marker({
+        position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+        map: map
+      });
+
+      google.maps.event.addListener(marker, 'click', (function(marker, i) {
+        return function() {
+          infowindow.setContent(locations[i][0]);
+          infowindow.open(map, marker);
+        }
+      })(marker, i));
+    }
+  }
+
+  draw();
+
 }]);
