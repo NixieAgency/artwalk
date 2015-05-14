@@ -20,6 +20,7 @@ angular.module('myApp.landing', ['ngRoute'])
   $scope.ipsumtheme = Lorem.article;
 
   Art.list().then(function(arts){
+    console.log(arts);
     $scope.arts = arts;
   });
 
