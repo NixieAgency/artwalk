@@ -25,6 +25,7 @@ rm client/app/bundle*min.js
 uglifyjs \
 app.js \
 components/googleSheetsHelper/googleSheetsHelper.js \
+components/copycat/copycat.js \
 views/landing/landing.js \
 views/about/about.js \
 views/archive/archive.js \

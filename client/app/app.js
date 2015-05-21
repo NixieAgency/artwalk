@@ -6,6 +6,7 @@ angular.module('myApp', [
   'ngSanitize',
   'mgcrea.ngStrap',
   'myApp.googleSheetsHelper',
+  'myApp.copycat',
   'myApp.landing',
   'myApp.about',
   'myApp.archive',

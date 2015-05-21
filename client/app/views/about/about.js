@@ -9,9 +9,11 @@ angular.module('myApp.about', ['ngRoute'])
   });
 }])
 
-.controller('aboutCtrl', ['$scope', '$http', 'Lorem', function($scope, $http, Lorem) {
+.controller('aboutCtrl', ['$scope', '$http', 'copycat', 'Lorem', function($scope, $http, copycat, Lorem) {
+  copycat.get('about').then(function(about){
+    $scope.about = about;
+  });
 
   $scope.ipsum = Lorem.blurb;
   $scope.short = Lorem.short;
-
 }]);

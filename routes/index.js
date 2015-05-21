@@ -8,6 +8,7 @@ router.get('/', function(req, res) {
   var dev_js = [
     { path: '/client/app.js' },
     { path: '/client/components/googleSheetsHelper/googleSheetsHelper.js' },
+    { path: '/client/components/copycat/copycat.js' },
     { path: '/client/views/landing/landing.js' },
     { path: '/client/views/about/about.js' },
     { path: '/client/views/archive/archive.js' },
