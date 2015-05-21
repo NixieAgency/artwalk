@@ -1,147 +1,26 @@
 <div class="container">
   <hr>
-  <div class="panel panel-default">
-    <div class="panel-heading">
-      <h3 class="panel-title">Decentralization</h3>
-    </div>
-    <div class="panel-body">
-      <p>Decentralization | 2015</p>
-      <div ng-bind-html="short"></div>
-      <hr>
-      <div class="row">
-          <div class="col-lg-3 col-sm-3 col-xs-4">
-              <a href="#">
-                   <img src="http://placehold.it/150x100" class="thumbnail img-responsive">
+
+  <div ng-repeat="program in programs">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">{{program.title}}</h3>
+      </div>
+      <div class="panel-body">
+        <p>{{program.title}} | {{program.date}}</p>
+        <div ng-bind-html="short"></div>
+        <hr>
+        <div class="row">
+          <div ng-repeat="art in program.art">
+            <div class="col-lg-3 col-sm-3 col-xs-4">
+              <a ng-href="#/art/{{art.slug}}">
+                <img src="{{art.image}}" class="thumbnail img-responsive">
               </a>
-          </div>
-          <div class="col-lg-3 col-sm-3 col-xs-4">
-              <a href="#">
-                   <img src="http://placehold.it/150x100" class="thumbnail img-responsive">
-              </a>
-          </div>
-          <div class="col-lg-3 col-sm-3 col-xs-4">
-              <a href="#">
-                   <img src="http://placehold.it/150x100" class="thumbnail img-responsive">
-              </a>
-          </div>
-          <div class="col-lg-3 col-sm-3 col-xs-4">
-              <a href="#">
-                   <img src="http://placehold.it/150x100" class="thumbnail img-responsive">
-              </a>
-          </div>
-          <div class="col-lg-3 col-sm-3 col-xs-4">
-              <a href="#">
-                   <img src="http://placehold.it/150x100" class="thumbnail img-responsive">
-              </a>
-          </div>
-          <div class="col-lg-3 col-sm-3 col-xs-4">
-              <a href="#">
-                   <img src="http://placehold.it/150x100" class="thumbnail img-responsive">
-              </a>
-          </div>
-          <div class="col-lg-3 col-sm-3 col-xs-4">
-              <a href="#">
-                   <img src="http://placehold.it/150x100" class="thumbnail img-responsive">
-              </a>
-          </div>
-          <div class="col-lg-3 col-sm-3 col-xs-4">
-              <a href="#">
-                   <img src="http://placehold.it/150x100" class="thumbnail img-responsive">
-              </a>
-          </div>
-          <div class="col-lg-3 col-sm-3 col-xs-4">
-              <a href="#">
-                   <img src="http://placehold.it/150x100" class="thumbnail img-responsive">
-              </a>
-          </div>
-          <div class="col-lg-3 col-sm-3 col-xs-4">
-              <a href="#">
-                   <img src="http://placehold.it/150x100" class="thumbnail img-responsive">
-              </a>
-          </div>
-          <div class="col-lg-3 col-sm-3 col-xs-4">
-              <a href="#">
-                   <img src="http://placehold.it/150x100" class="thumbnail img-responsive">
-              </a>
-          </div>
-          <div class="col-lg-3 col-sm-3 col-xs-4">
-              <a href="#">
-                   <img src="http://placehold.it/150x100" class="thumbnail img-responsive">
-              </a>
+            </div>
           </div>
         </div>
+      </div>
     </div>
   </div>
-  <div class="panel panel-default">
-    <div class="panel-heading">
-      <h3 class="panel-title">Metamorphosis</h3>
-    </div>
-    <div class="panel-body">
-      <p>Metamorphosis | 2014</p>
-      <div ng-bind-html="short"></div>
-      <hr>
-      <div class="row">
-          <div class="col-lg-3 col-sm-3 col-xs-4">
-              <a href="#">
-                   <img src="http://placehold.it/150x100" class="thumbnail img-responsive">
-              </a>
-          </div>
-          <div class="col-lg-3 col-sm-3 col-xs-4">
-              <a href="#">
-                   <img src="http://placehold.it/150x100" class="thumbnail img-responsive">
-              </a>
-          </div>
-          <div class="col-lg-3 col-sm-3 col-xs-4">
-              <a href="#">
-                   <img src="http://placehold.it/150x100" class="thumbnail img-responsive">
-              </a>
-          </div>
-          <div class="col-lg-3 col-sm-3 col-xs-4">
-              <a href="#">
-                   <img src="http://placehold.it/150x100" class="thumbnail img-responsive">
-              </a>
-          </div>
-          <div class="col-lg-3 col-sm-3 col-xs-4">
-              <a href="#">
-                   <img src="http://placehold.it/150x100" class="thumbnail img-responsive">
-              </a>
-          </div>
-          <div class="col-lg-3 col-sm-3 col-xs-4">
-              <a href="#">
-                   <img src="http://placehold.it/150x100" class="thumbnail img-responsive">
-              </a>
-          </div>
-          <div class="col-lg-3 col-sm-3 col-xs-4">
-              <a href="#">
-                   <img src="http://placehold.it/150x100" class="thumbnail img-responsive">
-              </a>
-          </div>
-          <div class="col-lg-3 col-sm-3 col-xs-4">
-              <a href="#">
-                   <img src="http://placehold.it/150x100" class="thumbnail img-responsive">
-              </a>
-          </div>
-          <div class="col-lg-3 col-sm-3 col-xs-4">
-              <a href="#">
-                   <img src="http://placehold.it/150x100" class="thumbnail img-responsive">
-              </a>
-          </div>
-          <div class="col-lg-3 col-sm-3 col-xs-4">
-              <a href="#">
-                   <img src="http://placehold.it/150x100" class="thumbnail img-responsive">
-              </a>
-          </div>
-          <div class="col-lg-3 col-sm-3 col-xs-4">
-              <a href="#">
-                   <img src="http://placehold.it/150x100" class="thumbnail img-responsive">
-              </a>
-          </div>
-          <div class="col-lg-3 col-sm-3 col-xs-4">
-              <a href="#">
-                   <img src="http://placehold.it/150x100" class="thumbnail img-responsive">
-              </a>
-          </div>
-        </div>
-    </div>
-  </div>
+
 </div>
