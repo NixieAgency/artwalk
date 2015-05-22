@@ -18,7 +18,13 @@ angular.module('myApp.googleSheetsHelper', [])
       return item;
     }).map(function(item){
       if (item.image) {
-        item.image = 'https://googledrive.com/host/0B1VMmT-RhPXQfi1wNmxtMHJ6OUh1bnBYVGZFNDhqcjdSWkpBWGNYaF9HRTZKU3NOTFpldDQ/' + item.image.replace(/[-\s]+/g, "%20");
+        function buildimagelink(filename){
+          return 'https://googledrive.com/host/0B1VMmT-RhPXQfi1wNmxtMHJ6OUh1bnBYVGZFNDhqcjdSWkpBWGNYaF9HRTZKU3NOTFpldDQ/' + filename.replace(/[-\s]+/g, "%20");
+        }
+        item.image = {
+          full: buildimagelink(item.image),
+          thumb: buildimagelink(item.image.replace('.jpg', ' thumb.jpg'))
+        };
       }
       return item;
     });

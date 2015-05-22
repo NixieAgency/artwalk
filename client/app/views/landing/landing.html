@@ -56,7 +56,7 @@
       <div ng-repeat="art in arts">
         <div class="col-lg-4 col-sm-6 col-xs-12">
           <a ng-href="#/art/{{art.slug}}">
-             <img src="{{art.image}}" class="thumbnail img-responsive">
+             <img src="{{art.image.thumb}}" class="thumbnail img-responsive">
              <h2>{{art.title}}</h2>
              <p>{{art.artist}} | {{art.hometown}}</p>
           </a>
