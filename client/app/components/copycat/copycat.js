@@ -6,12 +6,12 @@ angular.module('myApp.copycat', [])
   var copy_fields = [
       'id',
       'title',
-      'body',
+      'body'
   ];
   this.get = function(title){
     return $http.get(copy_url)
       .then(function(res){
-        return googleSheetsHelper.parse(copy_fields, ['title'], res.data).filter(function(copy){
+        return googleSheetsHelper.parse(copy_fields, ['id', 'title'], res.data).filter(function(copy){
           return copy.slug == title.replace(/[^\w\s-]/g, "").trim().toLowerCase().replace(/[-\s]+/g, "-");
         })[0].body;
       });
