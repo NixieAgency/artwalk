@@ -43,13 +43,20 @@
 
   <section class="space-no-top">
       <div class="row">
-        <div class="col-md-8 col-md-offset-2">
-            <h2 class="big-title text-center">Theme Title</h2>
-            <div ng-bind-html="ipsumtheme"></div>
-            <hr>
+        <div class="col-md-10 col-md-offset-1">
+          <ul>
+            <div ng-repeat="article in recent_news | orderBy:'-date'">
+              <li>
+                <h4>{{article.title}} | {{article.date | date:mediumDate}}</h4>
+                <p>{{article.body | limitTo : 200}}...</p>
+              </li>
+            </div>
+          </ul>
         </div>
     </div>
   </section>
+
+  <hr>
 
   <section class="space-no-top">
     <div class="row">
@@ -67,8 +74,30 @@
 
   <hr>
 
+  <section class="space-no-top">
+      <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <h2 class="big-title text-center">Theme Title</h2>
+            <div ng-bind-html="ipsumtheme"></div>
+            <hr>
+        </div>
+    </div>
+  </section>
+
+Theme Title: Current Program 5 Info (All Text: History, Jury, Selection Process, Timeline)
+
+LINKS
+
+Map (K - getting from Sara) (link to downloadable pdf of current exhibition map)
+
+Voting Info (Google doc survey - Ron)
+
+Instagram Contest #napaartwalk (K - talking Christy Bors)
+
+Audio Tour (K - Otocast Info - find out if we can have the link for diff phones)
+
   <section class="space-no-top" id="pre-footer">
-    <div id="map" style="width: 1200px; height: 600px;"></div>
+    <!-- <div id="map" style="width: 1200px; height: 600px;"></div> -->
     <div class="row">
       <div class="col-md-8 col-md-offset-2 text-center">
         <hr>

@@ -9,20 +9,47 @@ angular.module('myApp.landing', ['ngRoute'])
   });
 }])
 
+.service('News', ['$http', '$q', 'googleSheetsHelper', function($http, $q, googleSheetsHelper){
+  var media_archive_url = googleSheetsHelper.jsonurl("1fPfTlzipfy-dlZGOUFDW7n3T-ow8_TVUrrMDYyM2vTQ", 4);
+  var media_archive_fields = [
+      'title',
+      'body',
+      'image',
+      'date'
+  ];
+
+  this.list = function(){
+    return $http.get(media_archive_url)
+      .then(function(res){
+        return googleSheetsHelper.parse(media_archive_fields, ['headline', 'date'], res.data).map(function(article){
+          article.date = Date.parse(article.date);
+          return article;
+        }).filter(function(article){
+          return article.date;
+        });
+      });
+  };
+}])
+
 .value('Lorem', {
   blurb: "Whatever art party Bushwick, cold-pressed church-key meditation fap vinyl fanny pack listicle. Locavore master cleanse McSweeney's aesthetic, occupy pug deep v asymmetrical Austin.",
   short: '<p>Lorem ipsum dolor sit amet, et mel diam pertinacia. Id soleat populo mei, sit erat eruditi eu. Ut mel omnes diceret. Accusamus splendide in sea, in qui rebum bonorum voluptua. Ut fabulas nonumes eum, homero prompta conclusionemque at est. Eu cotidieque adversarium eam.</p><p>Ea graece dictas mollis sea. Te eos sapientem voluptaria, at accusamus efficiantur quo, sed cu enim ponderum tincidunt. Illud quaestio recteque ea his, pri at fabulas elaboraret. Amet zril per ea, usu alterum eligendi assentior an. Rebum facer ut per, ex tritani necessitatibus vel.</p>',
   article: '<p>Lorem ipsum dolor sit amet, et mel diam pertinacia. Id soleat populo mei, sit erat eruditi eu. Ut mel omnes diceret. Accusamus splendide in sea, in qui rebum bonorum voluptua. Ut fabulas nonumes eum, homero prompta conclusionemque at est. Eu cotidieque adversarium eam.</p><p>Ea graece dictas mollis sea. Te eos sapientem voluptaria, at accusamus efficiantur quo, sed cu enim ponderum tincidunt. Illud quaestio recteque ea his, pri at fabulas elaboraret. Amet zril per ea, usu alterum eligendi assentior an. Rebum facer ut per, ex tritani necessitatibus vel.</p><p>Id vix harum ignota numquam, in his alii constituto sadipscing. Vel et pericula urbanitas, eam id dictas aperiam ancillae. Ut est omnes discere blandit, at quo ullum causae. Te mundi option prodesset pri, ad justo ornatus cum. In usu prima voluptua tractatos, nam tollit fabellas omittantur eu, usu te iriure sensibus. Ex unum semper principes est. Nonumy instructior pri et, etiam nostro accommodare ei pri.</p><p>Vulputate abhorreant vis ut, dolores facilisis duo ex. Sea te dolorum recteque consulatu, in utamur molestiae adipiscing nam. Ius id alterum voluptua, ei aliquam salutatus splendide vim, est id vide fuisset comprehensam. Per omnis sonet no, id pri bonorum accommodare, sea an qualisque reformidans.</p>'
 })
 
-.controller('landingCtrl', ['$scope', '$http', 'Lorem', 'Art', 'Program', function($scope, $http, Lorem, Art, Program) {
+.controller('landingCtrl', ['$scope', '$http', 'Lorem', 'Art', 'Program', 'News', function($scope, $http, Lorem, Art, Program, News) {
 
   $scope.ipsumtheme = Lorem.article;
+
+  News.list().then(function(news){
+    $scope.recent_news = news;
+  });
 
   Art.current().then(function(arts){
     $scope.arts = arts;
   });
 
+  /*
   function draw(){
     var locations = [
       ['<h1>Platoform 1</h1><img src="http://lorempixel.com/300/200/abstract"></img>', 38.301347, -122.281463],
@@ -54,7 +81,7 @@ angular.module('myApp.landing', ['ngRoute'])
       })(marker, i));
     }
   }
-
   draw();
+  */
 
 }]);
