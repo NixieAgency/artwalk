@@ -16,17 +16,6 @@ angular.module('myApp.googleSheetsHelper', [])
       })
       item.slug = slug.replace(/[^\w\s-]/g, "").trim().toLowerCase().replace(/[-\s]+/g, "-");
       return item;
-    }).map(function(item){
-      if (item.image) {
-        function buildimagelink(filename){
-          return 'https://googledrive.com/host/0B1VMmT-RhPXQfi1wNmxtMHJ6OUh1bnBYVGZFNDhqcjdSWkpBWGNYaF9HRTZKU3NOTFpldDQ/' + filename.replace(/[-\s]+/g, "%20");
-        }
-        item.image = {
-          full: buildimagelink(item.image),
-          thumb: buildimagelink(item.image.replace('.jpg', ' thumb.jpg'))
-        };
-      }
-      return item;
     });
   };
   this.jsonurl = function(key, sheet_number){

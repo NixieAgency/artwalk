@@ -63,7 +63,9 @@
       <div ng-repeat="art in arts">
         <div class="col-lg-4 col-sm-6 col-xs-12">
           <a ng-href="#/art/{{art.slug}}">
-             <img src="{{art.image.thumb}}" class="thumbnail img-responsive">
+            <cl-image public-id="{{art.image}}" class="thumbnail inline" format="jpg">
+               <cl-transformation height="230" width="340" crop="fill" gravity="north"/>
+             </cl-image>
              <h2>{{art.title}}</h2>
              <p>{{art.artist}} | {{art.hometown}}</p>
           </a>

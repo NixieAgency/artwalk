@@ -4,6 +4,7 @@
 angular.module('myApp', [
   'ngRoute',
   'ngSanitize',
+  'cloudinary',
   'mgcrea.ngStrap',
   'myApp.googleSheetsHelper',
   'myApp.copycat',
