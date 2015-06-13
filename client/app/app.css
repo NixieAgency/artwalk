@@ -9,8 +9,7 @@
 */
 
 html {
-  /*background: #0d0221; */
-  background: #1d263b;
+  background: #0d0221;
 }
 
 body {
@@ -73,13 +72,14 @@ footer .row {
 
 .landing--art {
   position: relative;
-  background: #e0e0e2;
+  background: #fafaff;
 }
 
 .landing--art img {
   box-shadow: 2px 2px 10px #1d263b;
 }
 
+/* styling for pistures */
 .landing--art .description {
   color: white;
   position: absolute;
@@ -93,3 +93,33 @@ footer .row {
 
 .landing--info {
 }
+
+/* ---- grid ---- */
+
+.grid {
+}
+
+/* clearfix */
+.grid:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+/* ---- grid-item ---- */
+
+.grid-item {
+  position: relative;
+  float: left;
+  background: #D26;
+}
+
+/*
+.grid-item--width2 { width:  320px; }
+.grid-item--width3 { width:  480px; }
+.grid-item--width4 { width:  720px; }
+
+.grid-item--height2 { height: 200px; }
+.grid-item--height3 { height: 260px; }
+.grid-item--height4 { height: 360px; }
+*/

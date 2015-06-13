@@ -18,14 +18,22 @@
 <div class="container landing-container landing--art">
   <section class="space-no-top">
     <!-- init Masonry in HTML -->
-    <div class="art-grid"></div>
-    <script>
-      var grid = document.querySelector('.art-grid');
-      var msnry = new Masonry( grid, {
-        itemSelector: '.item',
-        columnWidth: 200
-      });
-    </script>
+
+    <div class="grid">
+      <div ng-repeat="art in arts">
+        <div class="grid-item">
+          <a ng-href="#/art/{{art.slug}}">
+             <cl-image public-id="{{art.image}}" class="inline" format="jpg">
+               <cl-transformation width="340" crop="fill" gravity="north"/>
+             </cl-image>
+             <div class="description">
+               <p>{{art.title}}</p>
+             </div>
+          </a>
+        </div>
+      </div>
+    </div>
+
     <!--
     <div class="row">
       <div ng-repeat="art in arts">
