@@ -25,6 +25,11 @@ a:hover {
   text-decoration: none;
 }
 
+/* override bootstrap hover and focus on navbar */
+.navbar li>a:focus, .navbar li>a:hover {
+  background-color: #1d263b;
+}
+
 header {
   background: #1d263b;
   padding: 25px 5px 0;
@@ -50,6 +55,7 @@ footer .row {
 }
 
 
+/* horrible hack for seamless sections*/
 .landing-container {
   margin-bottom: -50px;
   padding: 70px 70px 40px;

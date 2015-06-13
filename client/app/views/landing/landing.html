@@ -17,6 +17,16 @@
 
 <div class="container landing-container landing--art">
   <section class="space-no-top">
+    <!-- init Masonry in HTML -->
+    <div class="art-grid"></div>
+    <script>
+      var grid = document.querySelector('.art-grid');
+      var msnry = new Masonry( grid, {
+        itemSelector: '.item',
+        columnWidth: 200
+      });
+    </script>
+    <!--
     <div class="row">
       <div ng-repeat="art in arts">
         <div class="col-lg-4 col-sm-6 col-xs-12">
@@ -31,6 +41,7 @@
         </div>
       </div>
     </div>
+    -->
   </section>
 </div>
 
