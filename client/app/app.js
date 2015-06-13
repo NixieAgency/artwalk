@@ -5,7 +5,7 @@ angular.module('myApp', [
   'ngRoute',
   'ngSanitize',
   'cloudinary',
-  'mgcrea.ngStrap',
+  'angular-carousel',
   'myApp.googleSheetsHelper',
   'myApp.copycat',
   'myApp.landing',
@@ -16,10 +16,4 @@ angular.module('myApp', [
 ]).
 config(['$routeProvider', function($routeProvider) {
   $routeProvider.otherwise({redirectTo: '/'});
-}]).
-config(['$asideProvider', function($asideProvider){
-  angular.extend($asideProvider.defaults, {
-    animation: 'am-fadeAndSlideRight',
-    placement: 'right'
-  });
 }]);

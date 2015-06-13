@@ -1,13 +1,13 @@
 <div class="container">
-
   <section class="space-no-top" id="pre-footer">
       <div class="container">
         <h1>{{art.title}}</h1>
         <h2>{{art.artist}}</h2>
-        <img src="{{art.image.full}}">
+         <cl-image public-id="{{art.image}}" class="thumbnail inline" format="jpg">
+           <cl-transformation height="230" width="340" crop="fill" gravity="north"/>
+         </cl-image>
         <p>{{art.description}}</p>
         <p>{{art.saleprice}}</p>
       </div>
   </section>
-
 </div>
