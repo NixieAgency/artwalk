@@ -17,8 +17,8 @@
 
 <div class="container landing-container landing--art">
   <section class="space-no-top">
-    <!-- init Masonry in HTML -->
 
+    <!-- using masonry grid system
     <div class="grid">
       <div ng-repeat="art in arts">
         <div class="grid-item">
@@ -33,14 +33,14 @@
         </div>
       </div>
     </div>
+    -->
 
-    <!--
     <div class="row">
       <div ng-repeat="art in arts">
-        <div class="col-lg-4 col-sm-6 col-xs-12">
+        <div class="col-lg-4 col-sm-6 col-xs-12 art">
           <a ng-href="#/art/{{art.slug}}">
              <cl-image public-id="{{art.image}}" class="inline" format="jpg">
-               <cl-transformation width="340" crop="fill" gravity="north"/>
+               <cl-transformation width="340" height="340" crop="fill" gravity="north"/>
              </cl-image>
              <div class="description">
                <p>{{art.title}}</p>
@@ -49,7 +49,6 @@
         </div>
       </div>
     </div>
-    -->
   </section>
 </div>
 

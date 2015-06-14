@@ -3,8 +3,8 @@
       <div class="container">
         <h1>{{art.title}}</h1>
         <h2>{{art.artist}}</h2>
-         <cl-image public-id="{{art.image}}" class="thumbnail inline" format="jpg">
-           <cl-transformation height="230" width="340" crop="fill" gravity="north"/>
+         <cl-image public-id="{{art.image}}" format="jpg">
+           <cl-transformation height="600" width="800" crop="limit" gravity="north"/>
          </cl-image>
         <p>{{art.description}}</p>
         <p>{{art.saleprice}}</p>
