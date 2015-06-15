@@ -32,6 +32,7 @@ views/archive/archive.js \
 views/gallery/gallery.js \
 views/newsarchive/newsarchive.js \
 views/sponsors/sponsors.js \
+views/map/map.js \
 views/art/art.js \
 -o $jsbundle -mc )
 
