@@ -24,15 +24,20 @@ a:hover {
   text-decoration: none;
 }
 
+header {
+  background: #1d263b;
+  padding: 25px 5px 0;
+  box-shadow: 0px 2px 10px #1d263b;
+}
+
 /* override bootstrap hover and focus on navbar */
 .navbar li>a:focus, .navbar li>a:hover {
   background-color: #1d263b;
 }
 
-header {
-  background: #1d263b;
-  padding: 25px 5px 0;
-  box-shadow: 0px 2px 10px #1d263b;
+.nav-brand.logo a {
+  background: url('https://res.cloudinary.com/www-napaartwalk-com/image/upload/h_60,c_limit/v1434261998/15-17%20Images/logo.png') no-repeat;
+  text-indent: 100%;
 }
 
 footer {
@@ -73,7 +78,6 @@ footer .row {
 .landing--art {
   position: relative;
   background: #fafaff;
-  margin: 10px;
 }
 
 .landing--art .art {
@@ -84,7 +88,7 @@ footer .row {
   box-shadow: 2px 2px 10px #1d263b;
 }
 
-/* styling for pistures */
+/* styling for pictures */
 .landing--art .description {
   color: white;
   position: absolute;
@@ -97,6 +101,22 @@ footer .row {
 }
 
 .landing--info {
+}
+
+/* artshow */
+.artshow--show {
+  background: #fafaff;
+  margin: -11px 0 0 0;
+  width: 100%;
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
+.artshow--image {
+  padding: 25px;
+}
+
+.artshow--info {
 }
 
 /* ---- grid ---- */

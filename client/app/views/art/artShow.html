@@ -1,13 +1,31 @@
-<div class="container">
+<div class="container artshow--show">
   <section class="space-no-top" id="pre-footer">
-      <div class="container">
+    <div class="row">
+      <div class="col-md-8 artshow--image">
+        <cl-image public-id="{{art.image}}" class="img-responsive" format="jpg">
+margin: 10px;
+          <cl-transformation height="600" width="800" crop="limit" gravity="north"/>
+        </cl-image>
+      </div>
+      <div class="col-md-4 artshow--info">
+        <h1>{{art.title}}</h1>
+        <hr>
+        <h2>{{art.artist}}</h2>
+        <p>{{art.description}}</p>
+        <hr>
+        <p>{{art.saleprice}}</p>
+      </div>
+    </div>
+    <!--
+        <div></div>
         <h1>{{art.title}}</h1>
         <h2>{{art.artist}}</h2>
          <cl-image public-id="{{art.image}}" format="jpg">
+  margin: 10px;
            <cl-transformation height="600" width="800" crop="limit" gravity="north"/>
          </cl-image>
         <p>{{art.description}}</p>
         <p>{{art.saleprice}}</p>
-      </div>
+    -->
   </section>
 </div>
