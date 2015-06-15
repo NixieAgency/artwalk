@@ -12,6 +12,8 @@ angular.module('myApp', [
   'myApp.about',
   'myApp.archive',
   'myApp.gallery',
+  'myApp.newsarchive',
+  'myApp.sponsors',
   'myApp.art'
 ]).
 config(['$routeProvider', function($routeProvider) {

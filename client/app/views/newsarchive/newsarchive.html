@@ -1,0 +1,26 @@
+<div class="container">
+  <section class="space-no-top">
+      <div class="container">
+          <div class="row">
+              <div class="col-md-8 col-md-offset-2 text-center">
+                  <h4>Old News</h4>
+              </div>
+          </div>
+          <div class="row">
+            <ul class="media-list">
+              <div ng-repeat="article in media | orderBy:'-date'">
+                <hr>
+                <li class="media">
+                  <div class="media-left">
+                  </div>
+                  <div class="media-body media-right">
+                    <a href="{{article.link}}" target="_blank"><h3 class="media-heading">"{{article.headline}}"</h3></a>
+                    <p>{{article.publication}}: {{article.date | date:mediumDate}} | {{article.author}}</p>
+                  </div>
+                </li>
+              </div>
+            </ul>
+          </div>
+      </div>
+  </section>
+</div>

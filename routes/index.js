@@ -13,6 +13,8 @@ router.get('/', function(req, res) {
     { path: '/client/views/about/about.js' },
     { path: '/client/views/archive/archive.js' },
     { path: '/client/views/gallery/gallery.js' },
+    { path: '/client/views/newsarchive/newsarchive.js' },
+    { path: '/client/views/sponsors/sponsors.js' },
     { path: '/client/views/art/art.js' }
   ];
   var prod_css = [{ path: '/client/' + builds.css }];
