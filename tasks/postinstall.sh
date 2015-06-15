@@ -30,6 +30,8 @@ views/landing/landing.js \
 views/about/about.js \
 views/archive/archive.js \
 views/gallery/gallery.js \
+views/newsarchive/newsarchive.js \
+views/sponsors/sponsors.js \
 views/art/art.js \
 -o $jsbundle -mc )
 
