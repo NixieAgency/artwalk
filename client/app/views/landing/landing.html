@@ -1,40 +1,7 @@
-<div class="container landing-container landing--news">
-  <section class="space-no-top">
-      <div class="row">
-        <div class="col-md-10 col-md-offset-1">
-          <ul>
-            <div ng-repeat="article in recent_news | orderBy:'-date'">
-              <li>
-                <h4>{{article.title}} | {{article.date | date:mediumDate}}</h4>
-                <p>{{article.body | limitTo : 200}}...</p>
-              </li>
-            </div>
-          </ul>
-        </div>
-      </div>
-  </section>
-</div>
 
 <div class="container landing-container landing--art">
   <section class="space-no-top">
-
-    <!-- using masonry grid system
-    <div class="grid">
-      <div ng-repeat="art in arts">
-        <div class="grid-item">
-          <a ng-href="#/art/{{art.slug}}">
-             <cl-image public-id="{{art.image}}" format="jpg">
-               <cl-transformation width="340" height="340" crop="fill" gravity="north"/>
-             </cl-image>
-             <div class="description">
-               <p>{{art.title}}</p>
-             </div>
-          </a>
-        </div>
-      </div>
-    </div>
-    -->
-
+    <h1>Napa Art Walk 2015-2017 Current Program</h1>
     <div class="row">
       <div ng-repeat="art in arts">
         <div class="col-lg-4 col-sm-6 col-xs-12 art">
@@ -52,26 +19,28 @@
   </section>
 </div>
 
-<div class="container landing-container landing--theme">
+<div class="container landing-container landing--news">
   <section class="space-no-top">
-    <div class="row">
-      <div class="col-md-8 col-md-offset-2">
-          <h2 class="big-title text-center">Theme Title</h2>
-          <div ng-bind-html="ipsumtheme"></div>
-          <hr>
+      <div class="row">
+        <div class="col-md-10 col-md-offset-1">
+          <h1>Recent News</h1>
+          <ul>
+            <div ng-repeat="article in recent_news | orderBy:'-date'">
+              <li>
+                <h4>{{article.title}} | {{article.date | date:mediumDate}}</h4>
+                <p>{{article.body | limitTo : 200}}...</p>
+              </li>
+            </div>
+          </ul>
+        </div>
       </div>
-    </div>
   </section>
 </div>
-
 
 <div class="container landing-container landing--info">
   <section class="space-no-top" id="pre-footer">
     <div class="row">
       <div class="col-md-8 col-md-offset-2 text-center">
-        <p>
-          Theme Title: Current Program 5 Info (All Text: History, Jury, Selection Process, Timeline) LINKS Map (K - getting from Sara) (link to downloadable pdf of current exhibition map) Voting Info (Google doc survey - Ron) Instagram Contest #napaartwalk (K - talking Christy Bors) Audio Tour (K - Otocast Info - find out if we can have the link for diff phones)
-        </p>
         <p>Pick up a tour brochure at the Napa Valley Welcome Center at 600 Main St. Napa
           <br>
           OR
