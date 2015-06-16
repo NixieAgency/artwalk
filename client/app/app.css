@@ -24,6 +24,12 @@ a:hover {
   text-decoration: none;
 }
 
+section {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  min-height: 150px;
+}
+
 .navbar {
   background: #1d263b;
   padding: 10px 5px 0;
@@ -155,6 +161,23 @@ footer .row {
 .artshow--info .sales-info{
   font-size: 12px;
   font-style: italic;
+}
+
+.about--info {
+  height: 460px;
+  color: white;
+  background: url(https://res.cloudinary.com/www-napaartwalk-com/image/upload/h_460,c_fill/15-17%20Images/05_RGB_Wave_Bench_Hazel.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.about--social {
+  background: #fafaff;
+}
+
+.about--audiotour {
+  color: #fafaff;
+  background: #9b287b;
 }
 
 /* ---- grid ---- */

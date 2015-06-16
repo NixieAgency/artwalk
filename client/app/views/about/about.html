@@ -1,28 +1,36 @@
-<div class="container top-buffer">
-  <section class="space" id="about">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-8 col-md-offset-2">
-            <h3 class="big-title text-center">Slide show of current art</h3>
-
-            <h2 class="big-title text-center">About</h3>
-            <div ng-bind-html="about"></div>
-
-            <h2 class="text-center">Jury</h4>
-            <div ng-bind-html="jury"></div>
-
-            <h2 class="text-center">Vote</h4>
-            <div ng-bind-html="vote"></div>
-
-            <h2 class="text-center">Instagram contest</h4>
-            <div ng-bind-html="instagramcontest"></div>
-
-            <h2 class="text-center">Audio tour</h4>
-            <div ng-bind-html="audiotour"></div>
-
-          </div>
-        </div>
-      </div>
-      <!-- .container -->
-  </section>
+<section class="about--info">
+<div class="row">
+  <div class="col-md-8 col-md-offset-2">
+    <h2 class="big-title text-center">About</h2>
+    <div ng-bind-html="about"></div>
+  </div>
 </div>
+</section>
+
+<section class="about--social">
+<div class="container">
+	<div class="row">
+	  <div class="col-md-4">
+	    <h2 class="text-center">Jury</h4>
+	    <div ng-bind-html="jury"></div>
+	  </div>
+	  <div class="col-md-4">
+	    <h2 class="text-center">Vote</h4>
+	    <div ng-bind-html="vote"></div>
+	  </div>
+	  <div class="col-md-4">
+	    <h2 class="text-center">Instagram contest</h4>
+	    <div ng-bind-html="instagramcontest"></div>
+	  </div>
+	</div>
+</div>
+</section>
+
+<section class="about--audiotour">
+<div class="row">
+  <div class="col-md-8 col-md-offset-2">
+    <h2 class="text-center">Audio tour</h4>
+    <div ng-bind-html="audiotour"></div>
+  </div>
+</div>
+</section>
