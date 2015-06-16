@@ -66,18 +66,8 @@ footer .row {
   width: 100%;
 }
 
-.landing--news {
-  padding-bottom: 100px;
-}
-
-.landing--news li {
-  font-size: 12px;
-  list-style: none;
-}
-
 .landing--art {
   position: relative;
-  background: #fafaff;
 }
 
 .landing--art .art {
@@ -106,6 +96,17 @@ footer .row {
 .landing--art .description .artist{
   font-size: 12px;
 }
+
+.landing--news {
+  padding-bottom: 100px;
+  background: #fafaff;
+}
+
+.landing--news li {
+  font-size: 12px;
+  list-style: none;
+}
+
 
 /* artshow */
 .artshow--show {
