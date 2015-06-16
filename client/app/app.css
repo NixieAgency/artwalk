@@ -41,10 +41,13 @@ a:hover {
   text-indent: 100%;
 }
 
+.top-buffer {
+  padding-top: 100px;
+}
+
 footer {
   color: #a098ae;
   height: 250px;
-  margin-top: 50px;
   background: #1d263b; /* Old browsers */
   background: -moz-linear-gradient(top,  #1d263b 49%, #0d0221 99%); /* FF3.6+ */
   background: -webkit-gradient(linear, left top, left bottom, color-stop(49%,#1d263b), color-stop(99%,#0d0221)); /* Chrome,Safari4+ */
@@ -63,7 +66,7 @@ footer .row {
 /* horrible hack for seamless sections*/
 .landing-container {
   margin-bottom: -50px;
-  padding: 70px 70px 40px;
+  padding: 100px 70px 40px;
   width: 100%;
 }
 
@@ -116,10 +119,8 @@ footer .row {
 /* artshow */
 .artshow--show {
   background: #fafaff;
-  margin: -11px 0 0 0;
+  margin: 0;
   width: 100%;
-  padding-top: 25px;
-  padding-bottom: 25px;
 }
 
 .artshow--image {

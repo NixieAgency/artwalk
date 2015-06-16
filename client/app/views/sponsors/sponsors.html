@@ -1,38 +1,16 @@
-<div class="container">
-  <section class="space-no-top" id="pre-footer">
-      <div class="container">
-          <div class="row">
-              <div class="col-md-8 col-md-offset-2 text-center">
-                  <h4>SPECIAL THANKS</h4>
-                  <hr>
-              </div>
-          </div>
-
-          <div class="row">
-              <div class="col-md-3 col-sm-3 col-xs-6 col-md-offset-2">
-                  <p><a href="http://napa.andaz.hyatt.com/en/hotel/home.html">Andaz Napa</a></p>
-                  <p><a href="http://chandracerritocontemporary.com/">Chandra Cerrito</a></p>
-                  <p>Napa City installation crew</p>
-                  <p>Napa City Steering Commitee</p>
-                  <p><a href="http://www.napavalley.edu/people/eshearer/Pages/welcome.aspx">Erik Shearer</a></p>
-              </div>
-
-              <div class="col-md-3 col-sm-3 col-xs-6">
-                  <p><a href="https://www.francisfordcoppolawinery.com/">Francis Ford Coppola Presents</a></p>
-                  <p><a href="http://www.kelliefuller.com/">Kellie Fuller</a></p>
-                  <p><a href="http://www.candcinc.com/">Lisa Carlsson Graphic Design</a></p>
-                  <p><a href="http://mikeykelly.com/">Mikey Kelly</a></p>
-                  <p><a href="http://www.linkedin.com/pub/milbert-mariano/71/5a3/4">Milbert Mariano</a></p>
-              </div>
-
-              <div class="col-md-3 col-sm-3 col-xs-6">
-                  <p><a href="http://www.napavalleyplayhouse.org/">Michael Ross</a></p>
-                  <p><a href="http://oxbowpublicmarket.com/">The Oxbow Public Market</a></p>
-                  <p><a href="http://www.tarlagrill.com/">Tarla Mediterranean Grill</a></p>
-                  <p><a href="https://www.vintnerscollective.com/">Vintner's Collective</a></p>
-              </div>
-
-          </div>
+<div class="container sponsors-container top-buffer bottom-buffer">
+  <section>
+    <h1>Sponsors</h1>
+    <div class="row">
+      <div ng-repeat="sponsor in sponsors">
+        <div class="col-lg-4 col-sm-6 col-xs-12 sponsor">
+	    <a href="{{sponsor.site}}">
+		  <cl-image public-id="15-17 Images/logo" class="inline image-responsive" format="jpg">
+		    <cl-transformation width="340" height="340" crop="limit" gravity="north"/>
+		  </cl-image>
+	    </a>
+        </div>
       </div>
+    </div>
   </section>
 </div>

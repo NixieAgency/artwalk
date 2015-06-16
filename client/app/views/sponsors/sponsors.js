@@ -8,7 +8,26 @@ angular.module('myApp.sponsors', ['ngRoute'])
     controller: 'sponsorsCtrl'
   });
 }])
+.service('Sponsors', ['$http', '$q', 'googleSheetsHelper', function($http, $q, googleSheetsHelper){
+  var sponsor_fields = [
+      'name',
+      'type',
+      'site'
+  ];
 
-.controller('sponsorsCtrl', ['$scope', '$http', function($scope, $http) {
-  console.log('hello form sponsors controller');
+  var sponsor_url = googleSheetsHelper.jsonurl("1fPfTlzipfy-dlZGOUFDW7n3T-ow8_TVUrrMDYyM2vTQ", 6);
+
+  this.list = function(){
+    return $http.get(sponsor_url)
+      .then(function(res){
+        return googleSheetsHelper.parse(sponsor_fields, ['name', 'type'], res.data);
+      });
+  };
+
+}])
+
+.controller('sponsorsCtrl', ['$scope', '$http', 'Sponsors', function($scope, $http, Sponsors) {
+  Sponsors.list().then(function(sponsors){
+    $scope.sponsors = sponsors;
+  });
 }]);
