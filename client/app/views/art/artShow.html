@@ -8,13 +8,22 @@ margin: 10px;
         </cl-image>
       </div>
       <div class="col-md-4 artshow--info">
-        <h1>{{art.title}}</h1>
+        <h1>{{art.pedestalnumber}} | {{art.title}}</h1>
+        <h2>by {{art.artist}}</h2>
         <hr>
-        <h2>{{art.artist}}</h2>
+        <div class="artshow--info--about">
+          <p>{{art.materials}}</p>
+          <p>{{art.hometown}} {{art.year}}</p>
+        </div>
         <p>{{art.description}}</p>
         <hr>
-        <i class="fa fa-usd fa-lg"><span> {{art.saleprice.replace('$', '')}}</span></i>
-        <p>This work is available for sale through the Napa ARTwalk program. Ten percent of all sales during the exhibition supports the Napa ARTwalk. If you are interested in more information about purchasing a sculpture on display, please call the City of Napa’s Economic Development Division at <a href="tel:707-257-9502">707-257-9502</a>.</p>
+        <i class="fa fa-map-marker fa-2x action"><span> Find me!</span></i>
+        <i class="fa fa-heart-o fa-2x action"><span>Vote for me!</span></i>
+        <hr>
+        <i class="fa fa-usd fa-lg price"><span> {{art.saleprice.replace('$', '')}}</span></i>
+        <p class="sales-info">This work is available for sale through the Napa ARTwalk program. Ten percent of all sales during the exhibition supports the Napa ARTwalk. If you are interested in more information about purchasing a sculpture on display, please call the City of Napa’s Economic Development Division at
+        <br>
+        <i class="fa fa-phone"> <a href="tel:707-257-9502">707-257-9502</a></i>.</p>
       </div>
     </div>
   </section>

@@ -121,7 +121,34 @@ footer .row {
   padding: 25px;
 }
 
-.artshow--info {
+.artshow--info { }
+
+.artshow--info .artshow--info--about {
+  font-style: italic;
+  font-weight: bold;
+  float: left;
+  padding: 5px 20px 10px 10px;
+}
+
+.artshow--info .price{
+  font-style: italic;
+  float: left;
+  padding: 10px 10px 10px 5px;
+}
+
+.artshow--info i.action {
+  padding: 0 5px 0 5px;
+  color: #9b287b;
+}
+
+.artshow--info i.action span {
+  font-size: 12px;
+  font-style: italic;
+}
+
+.artshow--info .sales-info{
+  font-size: 12px;
+  font-style: italic;
 }
 
 /* ---- grid ---- */
