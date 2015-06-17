@@ -68,14 +68,6 @@ footer .row {
   margin: 30px 0;
 }
 
-
-/* horrible hack for seamless sections*/
-.landing-container {
-  margin-bottom: -50px;
-  padding: 100px 70px 40px;
-  width: 100%;
-}
-
 .landing--art {
   position: relative;
 }
@@ -95,7 +87,7 @@ footer .row {
   padding: 10px 5px 0px 10px;
   z-index: 1;
   bottom: 0px;
-  width: 340px;
+  width: 100%;
   box-shadow: 0px 313px rgba(29, 38, 59, 0.5) inset;
 }
 
@@ -112,7 +104,6 @@ footer .row {
 }
 
 .landing--news {
-  padding-bottom: 100px;
   background: #fafaff;
 }
 
@@ -175,9 +166,19 @@ footer .row {
   background: #fafaff;
 }
 
+.about--social .social--header{
+  float: left;
+  padding: 0 15px 0 0;
+}
+
 .about--audiotour {
   color: #fafaff;
   background: #9b287b;
+}
+
+/* ---- fa icons ---- */
+.fatext {
+  padding-left: 10px;
 }
 
 /* ---- grid ---- */
@@ -203,3 +204,4 @@ footer .row {
 .grid-item--width2 { width:  320px; }
 
 .grid-item--height2 { height: 200px; }
+

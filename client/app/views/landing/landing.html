@@ -1,11 +1,21 @@
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2 text-center">
+        <h1>Napa Art Walk 2015-2017 <br> Current Program</h1>
+        <hr>
+      </div>
+    </div>
+  </div>
+</section>
+
 <div class="container landing-container landing--art">
-  <section class="space-no-top">
-    <h1>Napa Art Walk 2015-2017 Current Program</h1>
+  <section>
     <div class="row">
       <div ng-repeat="art in arts">
         <div class="col-lg-4 col-sm-6 col-xs-12 art">
           <a ng-href="#/art/{{art.slug}}">
-             <cl-image public-id="{{art.image}}" class="inline" format="jpg">
+             <cl-image public-id="{{art.image}}" class="img-responsive" format="jpg">
                <cl-transformation width="340" height="340" crop="fill" gravity="north"/>
              </cl-image>
              <div class="description">
@@ -19,23 +29,28 @@
   </section>
 </div>
 
-<div class="container landing-container landing--news">
-  <section class="space-no-top">
-      <div class="row">
-        <div class="col-md-10 col-md-offset-1">
-          <h1>Recent News</h1>
-          <ul>
-            <div ng-repeat="article in recent_news | orderBy:'-date'">
-              <li>
-                <h4>{{article.title}} | {{article.date | date:mediumDate}}</h4>
-                <p>{{article.body | limitTo : 200}}...</p>
-              </li>
-            </div>
-          </ul>
+<section class="landing--news" >
+  <div class="row">
+    <div class="col-md-8 col-md-offset-2 text-center">
+      <h1>
+        <i class="fa fa-newspaper-o"><span class="fatext">Recent News</span></i>
+      </h1>
+      <hr>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <ul>
+        <div ng-repeat="article in recent_news | orderBy:'-date'">
+          <li>
+            <h4>{{article.title}} | {{article.date | date:mediumDate}}</h4>
+            <p>{{article.body | limitTo : 200}}...</p>
+          </li>
         </div>
-      </div>
-  </section>
-</div>
+      </ul>
+    </div>
+  </div>
+</section>
 
 <div class="container landing-container landing--info">
   <section class="space-no-top" id="pre-footer">
@@ -45,7 +60,9 @@
           <br>
           OR
           <br>
-          <a href="pdf/ARTwalk1315_Brochure.pdf"><strong class="download-brochure">Download one now</strong></a>
+          <i class="fa fa-cloud-download fa-2x"><span class="fatext">
+            <a href="pdf/ARTwalk1315_Brochure.pdf">Download one now</a>
+          </span></i>
         </p>
       </div>
     </div>

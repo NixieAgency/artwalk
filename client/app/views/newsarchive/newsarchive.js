@@ -3,7 +3,7 @@
 angular.module('myApp.newsarchive', ['ngRoute'])
 
 .config(['$routeProvider', function($routeProvider) {
-  $routeProvider.when('/newsarchive', {
+  $routeProvider.when('/press', {
     templateUrl: '/client/views/newsarchive/newsarchive.html',
     controller: 'newsarchiveCtrl'
   });
