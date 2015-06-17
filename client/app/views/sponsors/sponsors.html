@@ -1,61 +1,63 @@
-<section>
-  <div class="container">
-    <div class="row">
-        <div class="col-md-8 col-md-offset-2 text-center">
-            <h1>Sponsors</h1>
-            <hr>
-        </div>
-    </div>
-    <div class="row">
-      <div ng-repeat="sponsor in sponsors | filter:{ type: 1 }">
-        <div class="col-lg-4 col-sm-6 col-xs-12 sponsor">
-          <a href="{{sponsor.site}}">
-            <cl-image public-id="{{sponsor.image}}" alt="{{sponsor.name}}" class="image-responsive" format="jpg">
-              <cl-transformation width="340" height="340" crop="limit"/>
-            </cl-image>
-          </a>
+<div class="container sponsors">
+  <section>
+    <div class="container">
+      <div class="row">
+          <div class="col-md-8 col-md-offset-2 text-center">
+              <h1>Sponsors</h1>
+              <hr>
+          </div>
+      </div>
+      <div class="row">
+        <div ng-repeat="sponsor in sponsors | filter:{ type: 1 }">
+          <div class="col-lg-4 col-sm-6 col-xs-12 sponsor">
+            <a href="{{sponsor.site}}">
+              <cl-image public-id="{{sponsor.image}}" alt="{{sponsor.name}}" class="image-responsive" format="jpg">
+                <cl-transformation width="340" height="340" crop="lpad"/>
+              </cl-image>
+            </a>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
-<section>
-  <div class="container">
-    <div class="row">
-        <div class="col-md-8 col-md-offset-2 text-center">
-            <h1>Donors</h1>
-            <hr>
-        </div>
-    </div>
-    <div class="row">
-      <div ng-repeat="sponsor in sponsors | filter:{ type: 2 }">
-        <div class="col-lg-4 col-sm-6 col-xs-12 sponsor">
-          <a href="{{sponsor.site}}">
-            <cl-image public-id="{{sponsor.image}}" alt="{{sponsor.name}}" class="image-responsive" format="jpg">
-              <cl-transformation width="150" height="150" crop="limit"/>
-            </cl-image>
-          </a>
+  </section>
+  <section>
+    <div class="container">
+      <div class="row">
+          <div class="col-md-8 col-md-offset-2 text-center">
+              <h2>Donors</h2>
+              <hr>
+          </div>
+      </div>
+      <div class="row">
+        <div ng-repeat="sponsor in sponsors | filter:{ type: 2 }">
+          <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 donor">
+            <a href="{{sponsor.site}}">
+              <cl-image public-id="{{sponsor.image}}" alt="{{sponsor.name}}" class="image-responsive" format="jpg">
+                <cl-transformation width="200" height="200" crop="lpad"/>
+              </cl-image>
+            </a>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
-<section>
-  <div class="container">
-    <div class="row">
-        <div class="col-md-8 col-md-offset-2 text-center">
-            <h1>Special Thanks</h1>
-            <hr>
-        </div>
-    </div>
-    <div class="row">
-      <div ng-repeat="sponsor in sponsors | filter:{ type: 3 }">
-        <div class="col-lg-4 col-sm-6 col-xs-12 sponsor">
-          <a href="{{sponsor.site}}">
-            <p>{{sponsor.name}}</p>
-          </a>
+  </section>
+  <section>
+    <div class="container">
+      <div class="row">
+          <div class="col-md-8 col-md-offset-2 text-center">
+              <h3>Special Thanks</h3>
+              <hr>
+          </div>
+      </div>
+      <div class="row">
+        <div ng-repeat="sponsor in sponsors | filter:{ type: 3 }">
+          <div class="col-lg-4 col-sm-6 col-xs-12 text-center special">
+            <a href="{{sponsor.site}}">
+              <p>{{sponsor.name}}</p>
+            </a>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
+</div>
