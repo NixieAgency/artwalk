@@ -70,6 +70,7 @@ footer .row {
 
 .landing--art {
   position: relative;
+  margin-top: -90px;
 }
 
 .landing--art .art {

@@ -11,6 +11,7 @@ angular.module('myApp.sponsors', ['ngRoute'])
 .service('Sponsors', ['$http', '$q', 'googleSheetsHelper', function($http, $q, googleSheetsHelper){
   var sponsor_fields = [
       'name',
+      'image',
       'type',
       'site'
   ];

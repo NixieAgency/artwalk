@@ -10,8 +10,8 @@
       <div ng-repeat="sponsor in sponsors | filter:{ type: 1 }">
         <div class="col-lg-4 col-sm-6 col-xs-12 sponsor">
           <a href="{{sponsor.site}}">
-            <cl-image public-id="{{sponsor.name}}" alt="{{sponsor.name}}" class="inline image-responsive" format="jpg">
-              <cl-transformation width="40" height="40" crop="limit" gravity="north"/>
+            <cl-image public-id="{{sponsor.image}}" alt="{{sponsor.name}}" class="image-responsive" format="jpg">
+              <cl-transformation width="340" height="340" crop="limit"/>
             </cl-image>
           </a>
         </div>
@@ -31,8 +31,8 @@
       <div ng-repeat="sponsor in sponsors | filter:{ type: 2 }">
         <div class="col-lg-4 col-sm-6 col-xs-12 sponsor">
           <a href="{{sponsor.site}}">
-            <cl-image public-id="{{sponsor.name}}" alt="{{sponsor.name}}" class="inline image-responsive" format="jpg">
-              <cl-transformation width="40" height="40" crop="limit" gravity="north"/>
+            <cl-image public-id="{{sponsor.image}}" alt="{{sponsor.name}}" class="image-responsive" format="jpg">
+              <cl-transformation width="150" height="150" crop="limit"/>
             </cl-image>
           </a>
         </div>
