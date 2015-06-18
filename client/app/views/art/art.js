@@ -103,6 +103,18 @@ angular.module('myApp.art', ['ngRoute'])
 }])
 .controller('artShowCtrl', ['$scope', '$http', '$routeParams', 'Art', function($scope, $http, $routeParams, Art) {
 
+  $scope.validUrl = function(urlstring){
+    if (urlstring && urlstring.indexOf('http') === -1) return false;
+    return true;
+  };
+
+  $scope.hostName = function(urlstring){
+    if (!$scope.validUrl(urlstring))return;
+    var parser = document.createElement('a');
+    parser.href = urlstring;
+    return parser.hostname;
+  };
+
   Art.get($routeParams.artSlug).then(function(art){
     $scope.art = art;
   });
