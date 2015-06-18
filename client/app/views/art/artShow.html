@@ -27,7 +27,7 @@
           <p>{{art.description}}</p>
           <p class="artshow--artist--contact text-center">
             <a href="{{art.website}}" target="_blank" ng-if="validUrl(art.website)">{{hostName(art.website)}}</a>
-            <a href="mailto:{{art.email}}" target="_blank">{{art.email}}</a>
+            <a href="mailto:{{art.email}}" target="_blank" ng-if="!validUrl(art.website)">{{art.email}}</a>
           </p>
           <hr>
           <!--
