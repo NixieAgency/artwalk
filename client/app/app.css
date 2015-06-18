@@ -238,6 +238,14 @@ footer .row {
 .about--audiotour {
 }
 
+.about--audiotour .app--links {
+  padding: 20px;
+}
+
+.about--audiotour .app--links a {
+  padding: 20px;
+}
+
 .press {
   background: #fafaff;
 }
