@@ -9,7 +9,7 @@
 */
 
 html {
-  background: #0d0221;
+  background: #1d263b;
 }
 
 body {
@@ -64,8 +64,9 @@ nav li {
 }
 
 footer {
+  margin-top: -50px;
   color: #a098ae;
-  height: 200px;
+  height: 170px;
   background: #1d263b;
 }
 
@@ -122,11 +123,12 @@ footer em {
 }
 
 .landing--info {
-  height: 200px;
+  height: 300px;
+  padding: 50px;
 }
 
 .landing--info .map--block {
-  padding-top: 50px;
+  padding: 80px;
 }
 
 /* artshow */

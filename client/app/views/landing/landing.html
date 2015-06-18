@@ -31,39 +31,43 @@
 </section>
 
 <section class="landing--news" >
-  <div class="row">
-    <div class="col-md-8 col-md-offset-2 text-center">
-      <h1>
-        <i class="fa fa-newspaper-o"><span class="fatext">Recent News</span></i>
-      </h1>
-      <hr>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2 text-center">
+        <h1>
+          <i class="fa fa-newspaper-o"><span class="fatext">Recent News</span></i>
+        </h1>
+        <hr>
+      </div>
     </div>
-  </div>
-  <div class="row">
-    <div class="col-md-10 col-md-offset-1">
-      <ul>
-        <div ng-repeat="article in recent_news | orderBy:'-date'">
-          <li>
-            <h4>{{article.title}} | {{article.date | date:mediumDate}}</h4>
-            <p>{{article.body | limitTo : 200}}...</p>
-          </li>
-        </div>
-      </ul>
+    <div class="row">
+      <div class="col-md-10 col-md-offset-1">
+        <ul>
+          <div ng-repeat="article in recent_news | orderBy:'-date'">
+            <li>
+              <h4>{{article.title}} | {{article.date | date:mediumDate}}</h4>
+              <p>{{article.body | limitTo : 200}}...</p>
+            </li>
+          </div>
+        </ul>
+      </div>
     </div>
   </div>
 </section>
 
 <section class="landing--info">
-  <div class="row">
-    <div class="col-md-8 col-md-offset-2 map--block text-center">
-      <p><strong>Pick up a tour brochure at the Napa Valley Welcome Center at 600 Main St. Napa</strong>
-        <br>
-        OR
-        <br>
-        <i class="fa fa-cloud-download fa-2x"><span class="fatext">
-          <a href="https://res.cloudinary.com/www-napaartwalk-com/image/upload/v1434604949/map_ryubjz.jpg" target="_blank">Download one now</a>
-        </span></i>
-      </p>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2 map--block text-center">
+        <p><strong>Pick up a tour brochure at the Napa Valley Welcome Center at 600 Main St. Napa</strong>
+          <br>
+          OR
+          <br>
+          <i class="fa fa-cloud-download fa-2x"><span class="fatext">
+            <a href="https://res.cloudinary.com/www-napaartwalk-com/image/upload/v1434604949/map_ryubjz.jpg" target="_blank">Download one now</a>
+          </span></i>
+        </p>
+      </div>
     </div>
   </div>
 </section>
