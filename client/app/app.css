@@ -155,17 +155,15 @@ footer em {
 
 .artshow--info .artshow--info--about {
   font-style: italic;
-  font-weight: bold;
   float: left;
-  padding: 5px 20px 10px 10px;
+  padding-right: 20px;
 }
 
 .artshow--info .artshow--artist--contact {
-  padding:  10px;
+  font-weight: normal;
 }
 
 .artshow--info .artshow--artist--contact a {
-  padding:  10px;
 }
 
 .artshow--info .price{
@@ -180,11 +178,20 @@ footer em {
 }
 
 .artshow--info i.action span {
-  font-size: 12px;
   font-style: italic;
 }
 
-.artshow--info .sales-info{
+.artshow--info .sales-info {
+  font-size: 13px;
+  font-style: italic;
+}
+
+.artshow--info .sales-info .fa-phone {
+  font-size: 14px;
+}
+
+.credit {
+  font-size: 13px;
   font-style: italic;
 }
 

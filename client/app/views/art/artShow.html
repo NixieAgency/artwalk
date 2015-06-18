@@ -10,7 +10,7 @@
         </div>
         <div class="col-md-6 artshow--info">
           <div class="row">
-            <div class="col-md-1">
+            <div class="col-md-2">
               <h1>{{art.pedestalnumber}}</h1>
             </div>
             <div class="col-md-10">
@@ -23,12 +23,12 @@
           <div class="artshow--info--about">
             <p>{{art.materials}}</p>
             <p>{{art.year}}</p>
+            <p class="artshow--artist--contact">
+              <a href="{{art.website}}" target="_blank" ng-if="validUrl(art.website)">{{hostName(art.website)}}</a>
+              <a href="mailto:{{art.email}}" target="_blank" ng-if="!validUrl(art.website)">{{art.email}}</a>
+            </p>
           </div>
           <p>{{art.description}}</p>
-          <p class="artshow--artist--contact text-center">
-            <a href="{{art.website}}" target="_blank" ng-if="validUrl(art.website)">{{hostName(art.website)}}</a>
-            <a href="mailto:{{art.email}}" target="_blank" ng-if="!validUrl(art.website)">{{art.email}}</a>
-          </p>
           <hr>
           <!--
           <i class="fa fa-map-marker fa-2x action"><span> Find me!</span></i>
@@ -37,7 +37,7 @@
           -->
           <i class="fa fa-usd fa-lg price"><span> {{art.saleprice.replace('$', '')}}</span></i>
           <p class="sales-info">This work is available for sale through the Napa ARTwalk program. Ten percent of all sales during the exhibition supports the Napa ARTwalk. If you are interested in more information about purchasing a sculpture on display, please call the City of Napa’s Economic Development Division at <i class="fa fa-phone"> <a href="tel:707-257-9502">707-257-9502</a></i>.</p>
-          <p>photography by Israel Valencia</p>
+          <p class="credit">photography by Israel Valencia</p>
         </div>
       </div>
     </div>
