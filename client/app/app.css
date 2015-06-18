@@ -119,6 +119,12 @@ footer .row {
   list-style: none;
 }
 
+.landing--map {
+  background: url(https://res.cloudinary.com/www-napaartwalk-com/image/upload/v1434604949/map_ryubjz) no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 300px;
+}
 
 /* artshow */
 .artshow--show {
