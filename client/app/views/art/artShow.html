@@ -9,15 +9,26 @@
           </cl-image>
         </div>
         <div class="col-md-6 artshow--info">
-          <h1>{{art.pedestalnumber}} | {{art.title}}</h1>
-          <h2>by {{art.artist}}</h2>
+          <div class="row">
+            <div class="col-md-1">
+              <h1>{{art.pedestalnumber}}</h1>
+            </div>
+            <div class="col-md-10">
+              <h1>{{art.title}}</h1>
+              <h2>{{art.artist}}</h2>
+              <h3>{{art.hometown}}</h3>
+            </div>
+          </div>
           <hr>
           <div class="artshow--info--about">
             <p>{{art.materials}}</p>
-            <p>{{art.hometown}} {{art.year}}</p>
+            <p>{{art.year}}</p>
           </div>
           <p>{{art.description}}</p>
-          <a href="{{art.website}}" target="_blank" ng-if="validUrl(art.website)">{{hostName(art.website)}}</a>
+          <p class="artshow--artist--contact text-center">
+            <a href="{{art.website}}" target="_blank" ng-if="validUrl(art.website)">{{hostName(art.website)}}</a>
+            <a href="mailto:{{art.email}}" target="_blank">{{art.email}}</a>
+          </p>
           <hr>
           <!--
           <i class="fa fa-map-marker fa-2x action"><span> Find me!</span></i>
@@ -25,9 +36,8 @@
           <hr>
           -->
           <i class="fa fa-usd fa-lg price"><span> {{art.saleprice.replace('$', '')}}</span></i>
-          <p class="sales-info">This work is available for sale through the Napa ARTwalk program. Ten percent of all sales during the exhibition supports the Napa ARTwalk. If you are interested in more information about purchasing a sculpture on display, please call the City of Napa’s Economic Development Division at
-          <br>
-          <i class="fa fa-phone"> <a href="tel:707-257-9502">707-257-9502</a></i>.</p>
+          <p class="sales-info">This work is available for sale through the Napa ARTwalk program. Ten percent of all sales during the exhibition supports the Napa ARTwalk. If you are interested in more information about purchasing a sculpture on display, please call the City of Napa’s Economic Development Division at <i class="fa fa-phone"> <a href="tel:707-257-9502">707-257-9502</a></i>.</p>
+          <p>photography by Israel Valencia</p>
         </div>
       </div>
     </div>
