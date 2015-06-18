@@ -118,7 +118,16 @@ footer em {
   margin: 0px;
 }
 
-.landing--news {
+.landing--news h2 {
+  font-size: 20px;
+}
+
+.landing--news h3 {
+  font-size: 16px;
+}
+
+.landing--news p {
+  font-size: 14px;
 }
 
 .landing--news li {
@@ -210,7 +219,7 @@ footer em {
 .about--info {
   position: relative;
   height: 708px;
-  background: url(https://res.cloudinary.com/www-napaartwalk-com/image/upload/h_708,c_fill/invitation1_ksqhhk.jpg) no-repeat;
+  background: url(https://res.cloudinary.com/www-napaartwalk-com/image/upload/h_708,c_fill/invitation2_j2hwir.jpg) no-repeat;
   background-size: cover;
   background-position: center;
 }

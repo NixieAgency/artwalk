@@ -45,8 +45,11 @@
         <ul>
           <div ng-repeat="article in recent_news | orderBy:'-date'">
             <li>
-              <h4>{{article.title}} | {{article.date | date:mediumDate}}</h4>
-              <p>{{article.body | limitTo : 200}}...</p>
+              <a ng-href="#/news/{{article.slug}}">
+                <h2>{{article.title}}</h2>
+                <h3>{{article.date | date:mediumDate}}</h3>
+                <p>{{article.body | limitTo : 300}}...</p>
+              </a>
             </li>
           </div>
         </ul>

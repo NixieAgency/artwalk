@@ -25,7 +25,7 @@ angular.module('myApp.news', ['ngRoute'])
   this.list = function(){
     return $http.get(media_archive_url)
       .then(function(res){
-        return googleSheetsHelper.parse(media_archive_fields, ['headline', 'date'], res.data).map(function(article){
+        return googleSheetsHelper.parse(media_archive_fields, ['title', 'date'], res.data).map(function(article){
           article.date = Date.parse(article.date);
           return article;
         }).filter(function(article){
