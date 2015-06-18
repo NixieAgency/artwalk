@@ -79,7 +79,12 @@ footer em {
   font-weight: bold;
 }
 
+.landing--header {
+  background: #fafaff;
+}
+
 .landing--art {
+  background: #fafaff;
   position: relative;
   margin-top: -90px;
 }
@@ -114,7 +119,6 @@ footer em {
 }
 
 .landing--news {
-  background: #fafaff;
 }
 
 .landing--news li {
@@ -123,12 +127,20 @@ footer em {
 }
 
 .landing--info {
-  height: 300px;
-  padding: 50px;
+  position: relative;
+  height: 600px;
+  background: #e0e1e3 url(https://res.cloudinary.com/www-napaartwalk-com/image/upload/h_600,c_limit/ARTwalk_MAPLIST_ezschy.jpg) no-repeat;
+  background-position: left;
 }
 
-.landing--info .map--block {
-  padding: 80px;
+.landing--info .info--block {
+  position: absolute;
+  bottom: 15px;
+  right: 20px;
+}
+
+.landing--info .info--block a:hover, .landing--info .info--block a:focus {
+  color: white;
 }
 
 /* artshow */
@@ -198,11 +210,6 @@ footer em {
 .about--info {
   position: relative;
   height: 708px;
-  /*
-  background: url(https://res.cloudinary.com/www-napaartwalk-com/image/upload/h_708,c_fill/15-17%20Images/05_RGB_Wave_Bench_Hazel.jpg) no-repeat;
-  https://res.cloudinary.com/www-napaartwalk-com/image/upload/v1434656672/invitation1_ksqhhk.jpg
-  background: url(https://res.cloudinary.com/www-napaartwalk-com/image/upload/h_708,c_fill/invitation1_ksqhhk.jpg) no-repeat;
-  */
   background: url(https://res.cloudinary.com/www-napaartwalk-com/image/upload/h_708,c_fill/invitation1_ksqhhk.jpg) no-repeat;
   background-size: cover;
   background-position: center;
