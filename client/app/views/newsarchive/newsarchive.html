@@ -1,4 +1,4 @@
-<section>
+<section class="press">
   <div class="container">
     <div class="row">
       <div class="col-md-8 col-md-offset-2 text-center">
@@ -7,18 +7,21 @@
       </div>
     </div>
     <div class="row">
-      <ul class="media-list">
-        <div ng-repeat="article in media | orderBy:'-date'">
-          <li class="media">
-            <div class="media-left">
-            </div>
-            <div class="media-body media-right">
-              <a href="{{article.link}}" target="_blank"><h2 class="media-heading">"{{article.headline}}"</h2></a>
-              <p>{{article.publication}}: {{article.date | date:mediumDate}} | {{article.author}}</p>
-            </div>
-          </li>
+      <div ng-repeat="article in media | orderBy:'-date'">
+        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 press--article">
+          <h2 class="headline text-center">
+            {{article.headline}}
+            <i class="fa fa-quote-left"></i>
+            <i class="fa fa-quote-right"></i>
+          </h2>
+          <p><em>{{article.publication}}</em>, {{article.date | date:mediumDate}}</p>
+          <p class="pull-right"><a href="{{article.link}}" target="_blank">> Read More</a></p>
         </div>
-      </ul>
+      </div>
     </div>
   </div>
 </section>
+
+<!--
+  <a href="{{article.link}}" target="_blank"><h2 class="media-heading">{{article.headline}}</h2></a>
+-->
