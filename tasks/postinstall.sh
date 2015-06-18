@@ -31,6 +31,7 @@ views/about/about.js \
 views/archive/archive.js \
 views/gallery/gallery.js \
 views/press/press.js \
+views/news/news.js \
 views/sponsors/sponsors.js \
 views/map/map.js \
 views/art/art.js \
