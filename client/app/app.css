@@ -200,8 +200,10 @@ footer em {
   height: 708px;
   /*
   background: url(https://res.cloudinary.com/www-napaartwalk-com/image/upload/h_708,c_fill/15-17%20Images/05_RGB_Wave_Bench_Hazel.jpg) no-repeat;
+  https://res.cloudinary.com/www-napaartwalk-com/image/upload/v1434656672/invitation1_ksqhhk.jpg
+  background: url(https://res.cloudinary.com/www-napaartwalk-com/image/upload/h_708,c_fill/invitation1_ksqhhk.jpg) no-repeat;
   */
-  background: url(https://res.cloudinary.com/www-napaartwalk-com/image/upload/h_708,c_fill/One_World_2015ARTwalk_I8V-inst1-077_astzlq.jpg) no-repeat;
+  background: url(https://res.cloudinary.com/www-napaartwalk-com/image/upload/h_708,c_fill/invitation1_ksqhhk.jpg) no-repeat;
   background-size: cover;
   background-position: center;
 }
@@ -271,6 +273,10 @@ footer em {
 
 .press .press--article .headline {
   font-size: 20px;
+}
+
+.sponsors .special {
+  color: #a098ae;
 }
 
 /* ---- fa icons ---- */

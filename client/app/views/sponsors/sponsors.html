@@ -52,9 +52,10 @@
       <div class="row">
         <div ng-repeat="sponsor in sponsors | filter:{ type: 3 }">
           <div class="col-lg-4 col-sm-6 col-xs-12 text-center special">
-            <a href="{{sponsor.site}}">
+            <a href="{{sponsor.site}}" ng-if="validUrl(sponsor.site)">
               <p>{{sponsor.name}}</p>
             </a>
+            <p ng-if="!validUrl(sponsor.site)">{{sponsor.name}}</p>
           </div>
         </div>
       </div>

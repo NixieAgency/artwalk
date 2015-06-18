@@ -28,6 +28,13 @@ angular.module('myApp.sponsors', ['ngRoute'])
 }])
 
 .controller('sponsorsCtrl', ['$scope', '$http', 'Sponsors', function($scope, $http, Sponsors) {
+
+  $scope.validUrl = function(urlstring){
+    console.log(urlstring);
+    if (!urlstring || urlstring.indexOf('http') === -1) return false;
+    return true;
+  };
+
   Sponsors.list().then(function(sponsors){
     $scope.sponsors = sponsors;
   });
