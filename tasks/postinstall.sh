@@ -30,7 +30,7 @@ views/landing/landing.js \
 views/about/about.js \
 views/archive/archive.js \
 views/gallery/gallery.js \
-views/newsarchive/newsarchive.js \
+views/press/press.js \
 views/sponsors/sponsors.js \
 views/map/map.js \
 views/art/art.js \

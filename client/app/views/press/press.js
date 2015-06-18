@@ -1,15 +1,15 @@
 'use strict';
 
-angular.module('myApp.newsarchive', ['ngRoute'])
+angular.module('myApp.press', ['ngRoute'])
 
 .config(['$routeProvider', function($routeProvider) {
   $routeProvider.when('/press', {
-    templateUrl: '/client/views/newsarchive/newsarchive.html',
-    controller: 'newsarchiveCtrl'
+    templateUrl: '/client/views/press/press.html',
+    controller: 'pressCtrl'
   });
 }])
 
-.service('mediaArchive', ['$http', '$q', 'googleSheetsHelper', function($http, $q, googleSheetsHelper){
+.service('Press', ['$http', '$q', 'googleSheetsHelper', function($http, $q, googleSheetsHelper){
   var media_archive_url = googleSheetsHelper.jsonurl("1fPfTlzipfy-dlZGOUFDW7n3T-ow8_TVUrrMDYyM2vTQ", 5);
   var media_archive_fields = [
       'datepublished',
@@ -32,8 +32,8 @@ angular.module('myApp.newsarchive', ['ngRoute'])
   };
 }])
 
-.controller('newsarchiveCtrl', ['$scope', '$http', 'mediaArchive', function($scope, $http, mediaArchive) {
-  mediaArchive.list().then(function(media){
+.controller('pressCtrl', ['$scope', '$http', 'Press', function($scope, $http, Press) {
+  Press.list().then(function(media){
     $scope.media = media;
   });
 }]);

@@ -12,7 +12,8 @@ angular.module('myApp', [
   'myApp.about',
   'myApp.archive',
   'myApp.gallery',
-  'myApp.newsarchive',
+  'myApp.press',
+  'myApp.news',
   'myApp.sponsors',
   'myApp.map',
   'myApp.art'
