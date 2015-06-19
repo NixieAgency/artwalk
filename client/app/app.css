@@ -295,6 +295,10 @@ footer em {
   color: #a098ae;
 }
 
+.news--show {
+  min-height: 550px;
+}
+
 .news--show .news--header h1 {
   font-size: 25px;
 }
