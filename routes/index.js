@@ -35,4 +35,9 @@ router.get('/', function(req, res) {
   });
 });
 
+/* POST send in vote. */
+router.post('/vote', function(req, res){
+  console.log(req.body);
+});
+
 module.exports = router;
