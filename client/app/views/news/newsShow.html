@@ -1,3 +1,16 @@
-<div class="container">
-  <h1>news show</h1>
-</div>
+<section class="news--show">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2 news--header">
+        <h1>{{article.title}}</h1>
+        <h2>{{article.date | date:mediumDate}}</h2>
+        <hr>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2">
+        <div ng-bind-html="article.body"></div>
+      </div>
+    </div>
+  </div>
+</section>

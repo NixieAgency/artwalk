@@ -14,8 +14,8 @@ angular.module('myApp.news', ['ngRoute'])
 }])
 
 .service('News', ['$http', '$q', 'googleSheetsHelper', function($http, $q, googleSheetsHelper){
-  var media_archive_url = googleSheetsHelper.jsonurl("1fPfTlzipfy-dlZGOUFDW7n3T-ow8_TVUrrMDYyM2vTQ", 4);
-  var media_archive_fields = [
+  var news_url = googleSheetsHelper.jsonurl("1fPfTlzipfy-dlZGOUFDW7n3T-ow8_TVUrrMDYyM2vTQ", 4);
+  var news_fields = [
       'title',
       'body',
       'image',
@@ -23,14 +23,22 @@ angular.module('myApp.news', ['ngRoute'])
   ];
 
   this.list = function(){
-    return $http.get(media_archive_url)
+    return $http.get(news_url)
       .then(function(res){
-        return googleSheetsHelper.parse(media_archive_fields, ['title', 'date'], res.data).map(function(article){
+        return googleSheetsHelper.parse(news_fields, ['title', 'date'], res.data).map(function(article){
           article.date = Date.parse(article.date);
           return article;
         }).filter(function(article){
           return article.date;
         });
+      });
+  };
+  this.get = function(slug){
+    return $http.get(news_url)
+      .then(function(res){
+        return googleSheetsHelper.parse(news_fields, ['title', 'date'], res.data).filter(function(article){
+          return article.slug == slug;
+        })[0];
       });
   };
 }])

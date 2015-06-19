@@ -295,6 +295,14 @@ footer em {
   color: #a098ae;
 }
 
+.news--show .news--header h1 {
+  font-size: 25px;
+}
+
+.news--show .news--header h2 {
+  font-size: 20px;
+}
+
 /* ---- fa icons ---- */
 .fatext {
   font-size: 0.75em;
