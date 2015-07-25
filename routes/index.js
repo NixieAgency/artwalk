@@ -35,9 +35,9 @@ router.get('/', function(req, res) {
   });
 });
 
-/* POST send in vote. */
-router.post('/vote', function(req, res){
-  console.log(req.body);
+/* POST send in vote. */ router.post('/vote', function(req, res){
+  //var vote = JSON.parse(res.body);
+  res.status(200).json({ msg: 'Thanks'});
 });
 
 module.exports = router;
