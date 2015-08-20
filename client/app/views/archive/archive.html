@@ -10,9 +10,11 @@
         <hr>
         <div class="row">
           <div ng-repeat="art in program.art">
-            <div class="col-lg-3 col-sm-3 col-xs-4">
+            <div class="col-lg-4 col-sm-6 col-xs-12">
               <a ng-href="#/art/{{art.slug}}">
-                <img src="{{art.image.thumb}}" class="thumbnail img-responsive">
+                <cl-image public-id="{{art.image}}" class="img-responsive" format="jpg">
+                  <cl-transformation width="340" height="340" crop="fill" gravity="north"/>
+                </cl-image>
               </a>
             </div>
           </div>
