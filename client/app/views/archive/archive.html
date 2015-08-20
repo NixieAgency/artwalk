@@ -1,5 +1,5 @@
 <div class="container top-buffer">
-  <div ng-repeat="program in programs">
+  <div ng-repeat="program in programs | orderBy: '-date'">
     <div class="panel panel-default">
       <div class="panel-heading">
         <h3 class="panel-title">{{program.title}}</h3>
